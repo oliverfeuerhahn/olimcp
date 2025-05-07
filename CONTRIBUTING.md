@@ -42,15 +42,15 @@ If you’d like to use the repository from source, you can either install from g
 To install via git:
 
 ```sh
-$ npm install git+ssh://git@github.com:stainless-sdks/oli-embedded-mcp-typescript.git
+$ npm install git+ssh://git@github.com:oliverfeuerhahn/olimcp.git
 ```
 
 Alternatively, to link a local copy of the repo:
 
 ```sh
 # Clone
-$ git clone https://www.github.com/stainless-sdks/oli-embedded-mcp-typescript
-$ cd oli-embedded-mcp-typescript
+$ git clone https://www.github.com/oliverfeuerhahn/olimcp
+$ cd olimcp
 
 # With yarn
 $ yarn link

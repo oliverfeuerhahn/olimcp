@@ -1,4 +1,4 @@
 configured_endpoints: 50
 openapi_spec_url: https://storage.googleapis.com/stainless-sdk-openapi-specs/alloy%2Foli-embedded-mcp-35f3b40b301bf14beeb4f58e05a82e5e6634188e64686e18984a5f2dd18f4de7.yml
 openapi_spec_hash: 0993c2e2a300905b5bab50364f392168
-config_hash: c555318204d5fa974c246be3e80e3b24
+config_hash: d208e16e3f29eabe9d2bcfa41e9b2ce2
