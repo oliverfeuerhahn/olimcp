@@ -27,11 +27,7 @@ import OliEmbeddedMcp from 'oli-embedded-mcp';
 
 const client = new OliEmbeddedMcp();
 
-async function main() {
-  const response = await client.authentication.generateJwt();
-}
-
-main();
+const response = await client.authentication.generateJwt();
 ```
 
 ### Request & Response types
@@ -44,11 +40,7 @@ import OliEmbeddedMcp from 'oli-embedded-mcp';
 
 const client = new OliEmbeddedMcp();
 
-async function main() {
-  const response: unknown = await client.authentication.generateJwt();
-}
-
-main();
+const response: unknown = await client.authentication.generateJwt();
 ```
 
 Documentation for each method, request param, and response field are available in docstrings and will appear on hover in most modern editors.
@@ -61,19 +53,15 @@ a subclass of `APIError` will be thrown:
 
 <!-- prettier-ignore -->
 ```ts
-async function main() {
-  const response = await client.authentication.generateJwt().catch(async (err) => {
-    if (err instanceof OliEmbeddedMcp.APIError) {
-      console.log(err.status); // 400
-      console.log(err.name); // BadRequestError
-      console.log(err.headers); // {server: 'nginx', ...}
-    } else {
-      throw err;
-    }
-  });
-}
-
-main();
+const response = await client.authentication.generateJwt().catch(async (err) => {
+  if (err instanceof OliEmbeddedMcp.APIError) {
+    console.log(err.status); // 400
+    console.log(err.name); // BadRequestError
+    console.log(err.headers); // {server: 'nginx', ...}
+  } else {
+    throw err;
+  }
+});
 ```
 
 Error codes are as follows:
