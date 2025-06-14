@@ -2,7 +2,7 @@
 
 import type { OliEmbeddedMcp } from '../client';
 
-export class APIResource {
+export abstract class APIResource {
   protected _client: OliEmbeddedMcp;
 
   constructor(client: OliEmbeddedMcp) {
