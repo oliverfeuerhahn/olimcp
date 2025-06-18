@@ -1,6 +1,6 @@
 # Oli Embedded Mcp TypeScript API Library
 
-[![NPM version](https://img.shields.io/npm/v/oli-embedded-mcp.svg)](https://npmjs.org/package/oli-embedded-mcp) ![npm bundle size](https://img.shields.io/bundlephobia/minzip/oli-embedded-mcp)
+[![NPM version](<https://img.shields.io/npm/v/oli-embedded-mcp.svg?label=npm%20(stable)>)](https://npmjs.org/package/oli-embedded-mcp) ![npm bundle size](https://img.shields.io/bundlephobia/minzip/oli-embedded-mcp)
 
 This library provides convenient access to the Oli Embedded Mcp REST API from server-side TypeScript or JavaScript.
 
