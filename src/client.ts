@@ -298,6 +298,7 @@ export class OliEmbeddedMcp {
       timeout: this.timeout,
       logger: this.logger,
       logLevel: this.logLevel,
+      fetch: this.fetch,
       fetchOptions: this.fetchOptions,
       baseurl: this.baseurl,
       ...options,
