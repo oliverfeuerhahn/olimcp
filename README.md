@@ -1,6 +1,6 @@
 # Oli Embedded Mcp TypeScript API Library
 
-[![NPM version](https://img.shields.io/npm/v/oli-embedded-mcp.svg)](https://npmjs.org/package/oli-embedded-mcp) ![npm bundle size](https://img.shields.io/bundlephobia/minzip/oli-embedded-mcp)
+[![NPM version](<https://img.shields.io/npm/v/oli-embedded-mcp.svg?label=npm%20(stable)>)](https://npmjs.org/package/oli-embedded-mcp) ![npm bundle size](https://img.shields.io/bundlephobia/minzip/oli-embedded-mcp)
 
 This library provides convenient access to the Oli Embedded Mcp REST API from server-side TypeScript or JavaScript.
 
@@ -15,7 +15,7 @@ npm install git+ssh://git@github.com:oliverfeuerhahn/olimcp.git
 ```
 
 > [!NOTE]
-> Once this package is [published to npm](https://app.stainless.com/docs/guides/publish), this will become: `npm install oli-embedded-mcp`
+> Once this package is [published to npm](https://www.stainless.com/docs/guides/publish), this will become: `npm install oli-embedded-mcp`
 
 ## Usage
 
@@ -27,11 +27,7 @@ import OliEmbeddedMcp from 'oli-embedded-mcp';
 
 const client = new OliEmbeddedMcp();
 
-async function main() {
-  const response = await client.authentication.generateJwt();
-}
-
-main();
+const response = await client.authentication.generateJwt();
 ```
 
 ### Request & Response types
@@ -44,11 +40,7 @@ import OliEmbeddedMcp from 'oli-embedded-mcp';
 
 const client = new OliEmbeddedMcp();
 
-async function main() {
-  const response: unknown = await client.authentication.generateJwt();
-}
-
-main();
+const response: unknown = await client.authentication.generateJwt();
 ```
 
 Documentation for each method, request param, and response field are available in docstrings and will appear on hover in most modern editors.
@@ -61,19 +53,15 @@ a subclass of `APIError` will be thrown:
 
 <!-- prettier-ignore -->
 ```ts
-async function main() {
-  const response = await client.authentication.generateJwt().catch(async (err) => {
-    if (err instanceof OliEmbeddedMcp.APIError) {
-      console.log(err.status); // 400
-      console.log(err.name); // BadRequestError
-      console.log(err.headers); // {server: 'nginx', ...}
-    } else {
-      throw err;
-    }
-  });
-}
-
-main();
+const response = await client.authentication.generateJwt().catch(async (err) => {
+  if (err instanceof OliEmbeddedMcp.APIError) {
+    console.log(err.status); // 400
+    console.log(err.name); // BadRequestError
+    console.log(err.headers); // {server: 'nginx', ...}
+  } else {
+    throw err;
+  }
+});
 ```
 
 Error codes are as follows:
@@ -233,9 +221,8 @@ parameter. This library doesn't validate at runtime that the request matches the
 send will be sent as-is.
 
 ```ts
-client.foo.create({
-  foo: 'my_param',
-  bar: 12,
+client.authentication.generateJwt({
+  // ...
   // @ts-expect-error baz is not yet public
   baz: 'undocumented option',
 });
